@@ -42,7 +42,7 @@ export default function SectionBerita() {
             {tulisan.map((t) => {
               if (t.id > 1) {
                 return (
-                  <div className="flex items-center space-x-6">
+                  <div key={t.id} className="flex items-center space-x-6">
                     <div>
                       <h4 className="text-2xl text-black/80 font-medium mb-[25px]">
                         {t.title}
