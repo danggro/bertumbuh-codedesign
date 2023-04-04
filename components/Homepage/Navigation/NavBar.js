@@ -21,7 +21,7 @@ export default function NavBar() {
           <CtgItem href="#Tentang">Tentang</CtgItem>
           <CtgItem href="#Butuh">kami Butuh Kamu</CtgItem>
           <CtgItem href="#Post">Post</CtgItem>
-          <CtgItem href="#News">Newsletter</CtgItem>
+          <CtgItem href="#Berita">Newsletter</CtgItem>
         </ul>
       </Container>
     </div>
