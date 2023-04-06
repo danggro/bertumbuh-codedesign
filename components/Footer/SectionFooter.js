@@ -13,7 +13,11 @@ export default function SectionFooter() {
     <footer className="pl-[70px] pt-[56px] pb-8 mt-[150px] bg-primary pr-[45px]">
       <div className="flex ">
         <div className="w-6/12">
-          <Bertumbuh />
+          <div className="w-fit">
+            <Link href={`/`} className="hover:opacity-70">
+              <Bertumbuh />
+            </Link>
+          </div>
         </div>
         <div className="w-6/12 flex space-x-[73px]">
           <FooterItem title="POSTS">
