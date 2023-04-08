@@ -4,9 +4,9 @@ import HeadSection from "@/components/HeadSection";
 
 export default function SectionButuh() {
   return (
-    <section id="Butuh" className="mt-[150px]">
+    <section id="Butuh" className="xl:mt-[150px] md:mt-[120px]">
       <Container>
-        <div className="flex ">
+        <div className="flex xl:space-x-0 md:space-x-[18px]">
           <div className="w-6/12">
             <div className="w-10/12">
               <HeadSection
@@ -14,21 +14,25 @@ export default function SectionButuh() {
                 title="Kenapa BERTUMBUH Butuh Kamu?"
               />
             </div>
-            <div className="mt-[30px] mb-10 flex space-x-[87px]">
+            <div className="xl:mt-[30px] md:mt-5 xl:mb-10 md:mb-[25px] flex xl:space-x-[87px] md:space-x-[28px]">
               <div>
-                <h5 className="text-black/80 font-medium text-[32px]">
+                <h5 className="text-black/80 font-medium xl:text-[32px] md:text-2xl">
                   15,3 M
                 </h5>
-                <p className="text-xl text-secondary">Pohon ditebang</p>
+                <p className="xl:text-xl md:text-lg text-secondary">
+                  Pohon ditebang
+                </p>
               </div>
               <div>
-                <h5 className="text-black/80 font-medium text-[32px]">
+                <h5 className="text-black/80 font-medium xl:text-[32px] md:text-2xl">
                   14,7 Ha
                 </h5>
-                <p className="text-xl text-secondary">Hutan ditebang</p>
+                <p className="xl:text-xl md:text-lg text-secondary">
+                  Hutan ditebang
+                </p>
               </div>
             </div>
-            <p className="w-10/12 pr-1 text-xl text-justify mb-[70px] text-secondary">
+            <p className="xl:w-10/12 pr-1 xl:text-xl md:text-lg text-justify xl:mb-[70px] text-secondary md:mb-10">
               15,3 Milyar pohon setiap tahun ditebang di dunia serta hilangnya
               14,7 hektare lahan hutan hilang di indonesia. Hali ini menyebabkan
               bumi tidak stabil dan kami mengajak kamu untuk bergabung dan

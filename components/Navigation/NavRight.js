@@ -3,7 +3,7 @@ import Button from "@/components/Button";
 export default function NavRight() {
   return (
     <div className="flex items-center space-x-[30px]">
-      <label className="relative">
+      <label className="hidden xl:relative">
         <input
           type="text"
           placeholder="Cari blog dan artikel disini ..."

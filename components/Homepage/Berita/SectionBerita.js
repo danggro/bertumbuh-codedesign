@@ -16,12 +16,15 @@ export default function SectionBerita() {
             sect="Baca Tulisan Kami"
             title="Berita, Artikel & Event Terbaru"
           />
-          <p className="w-7/12 mt-5 text-xl pr-14 text-secondary">
+          <p className="w-7/12 mt-5 text-xl xl:block md:hidden pr-14 text-secondary">
             Baca dan ikuti event serta program-program yang kami lakukan untuk
             bumi yang lebih baik
           </p>
+          <p className="w-7/12 mt-1 text-base xl:hidden pr-14 text-secondary">
+            Baca dan ikuti event Bertumbuh
+          </p>
         </div>
-        <div className="flex mt-10 space-x-[79px]">
+        <div className="flex xl:mt-10 md:mt-[30px] md:space-x-5 xl:space-x-[79px]">
           <div className="w-6/12">
             {tulisan.map((t) => {
               if (t.id < 2) {
@@ -41,11 +44,11 @@ export default function SectionBerita() {
                         query: { id: `${t.id}` },
                       }}
                     >
-                      <h4 className="text-[26px] mt-6 mb-[18px] font-medium text-black/80">
+                      <h4 className="xl:text-[26px] md:text-xl md:mt-[10px] xl:mt-6 xl:mb-[18px] md:mb-[15px] font-medium text-black/80">
                         {t.title}
                       </h4>
                     </Link>
-                    <p className="text-xl text-justify text-secondary">
+                    <p className="text-justify xl:text-xl md:text-lg text-secondary">
                       {t.desc}
                     </p>
                   </div>
@@ -53,11 +56,14 @@ export default function SectionBerita() {
               }
             })}
           </div>
-          <div className="w-6/12 flex flex-col space-y-[60px]">
+          <div className="w-6/12 flex flex-col md:space-y-5 xl:space-y-[60px]">
             {tulisan.map((t) => {
               if (t.id > 1) {
                 return (
-                  <div key={t.id} className="flex items-center space-x-6">
+                  <div
+                    key={t.id}
+                    className="flex items-start md:space-x-3 xl:space-x-6"
+                  >
                     <div>
                       <Link
                         href={{
@@ -65,20 +71,28 @@ export default function SectionBerita() {
                           query: { id: `${t.id}` },
                         }}
                       >
-                        <h4 className="text-2xl text-black/80 font-medium mb-[25px]">
+                        <h4 className="xl:text-2xl md:text-lg text-black/80 font-medium xl:mb-[25px] md:mb-2">
                           {t.title}
                         </h4>
                       </Link>
-                      <p className="text-xl text-secondary">{t.date}</p>
+                      <p className="xl:text-xl md:text-base text-secondary">
+                        {t.date}
+                      </p>
                     </div>
                     <Link
-                      className="flex-shrink-0"
+                      className="flex-shrink-0 "
                       href={{
                         pathname: "/detailblog",
                         query: { id: `${t.id}` },
                       }}
                     >
-                      <Image width="123" height="120" src={t.img} alt="" />
+                      <Image
+                        width="123"
+                        height="120"
+                        src={t.img}
+                        alt=""
+                        className="xl:w-[123px] md:w-[80px]"
+                      />
                     </Link>
                   </div>
                 );
@@ -86,7 +100,7 @@ export default function SectionBerita() {
             })}
           </div>
         </div>
-        <div className="mt-20 text-center">
+        <div className="xl:mt-20 md:mt-[60px] text-center">
           <Link href="/allblog">
             <Button>Lihat Selengkapnya</Button>
           </Link>

@@ -5,7 +5,7 @@ export default function FooterItemLink(props) {
     <li className="mb-[6px] ">
       <Link
         href={props.href}
-        className="hover:underline leading-[27px] text-lg text-white"
+        className="hover:underline leading-[27px] md:text-sm xl:text-lg text-white"
       >
         {props.children}
       </Link>

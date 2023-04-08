@@ -10,16 +10,16 @@ import Twitter from "./Icon/Twitter";
 
 export default function SectionFooter() {
   return (
-    <footer className="pl-[70px] pt-[56px] pb-8 mt-[150px] bg-primary pr-[45px]">
+    <footer className="xl:pl-[70px] md:px-[48px] md:pt-[49px] xl:pt-[56px] pb-8 mt-[150px] bg-primary pr-[45px]">
       <div className="flex ">
-        <div className="w-6/12">
-          <div className="w-fit">
-            <Link href={`/`} className="hover:opacity-70">
+        <div className="xl:w-6/12 md:w-4/12">
+          <div className="w-fit xl:scale-100 md:scale-[79%] origin-top-left">
+            <Link href={`/`} className="hover:opacity-70 ">
               <Bertumbuh />
             </Link>
           </div>
         </div>
-        <div className="w-6/12 flex space-x-[73px]">
+        <div className="xl:w-6/12 md:w-8/12 flex xl:space-x-[73px] md:space-x-[31px]">
           <FooterItem title="POSTS">
             <FooterItemLink href="/#">Berita</FooterItemLink>
             <FooterItemLink href="/#">Event</FooterItemLink>
@@ -32,18 +32,18 @@ export default function SectionFooter() {
           </FooterItem>
           <FooterItem title="Alamat">
             <li className="mb-[6px]">
-              <p className="text-white text-lg leading-[27px] w-[250px]">
+              <p className="text-white xl:text-lg md:text-sm xl:leading-[27p md:leading-[21px] w-[250px]">
                 Jl. Kh. Wahid Hasyim No.76, Cipeujeuh Wetan, Kec. Lemahabang,
                 Kabupaten Cirebon, Jawa Barat, 45183
               </p>
             </li>
             <li className="mb-[6px]">
-              <p className="text-white text-lg leading-[27px]">
+              <p className="text-white xl:text-lg md:text-sm xl:leading-[27px] md:leading-[21px]">
                 {`(0231) 635308`}
               </p>
             </li>
             <li className="mb-[6px]">
-              <p className="text-white text-base leading-[27px]">
+              <p className="text-white xl:text-base md:text-sm xl:leading-[27px] md:leading-[21px]">
                 surat@smkn1emahabang.sch.id
               </p>
             </li>
@@ -90,7 +90,7 @@ export default function SectionFooter() {
           </li>
         </ul>
         <span>
-          <p className="text-base text-white">
+          <p className="text-sm text-white xl:text-base xl:pr-16">
             &copy; 2022 BERTUMBUH | SKENSALA - SMKN 1 LEMAHABANG
           </p>
         </span>

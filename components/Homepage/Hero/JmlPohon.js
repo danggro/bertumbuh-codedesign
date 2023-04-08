@@ -2,7 +2,7 @@ import JmlPohonLogo from "@/components/Logo/JmlPohonLogo";
 
 export default function JmlPohon() {
   return (
-    <div className=" justify-center flex items-end space-x-[68px]">
+    <div className=" justify-center flex xl:items-end md:items-center xl:space-x-[68px] md:space-x-[39px]">
       <JmlPohonLogo />
       <div>
         <h3 className="text-[54px] text-black">1.351.003</h3>
