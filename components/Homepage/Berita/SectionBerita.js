@@ -3,6 +3,7 @@ import Container from "@/components/Container";
 import HeadSection from "@/components/HeadSection";
 import mockTulisan from "@/utils/Tulisan.json";
 import Image from "next/image";
+import Link from "next/link";
 import { useState } from "react";
 
 export default function SectionBerita() {
@@ -26,10 +27,24 @@ export default function SectionBerita() {
               if (t.id < 2) {
                 return (
                   <div key={t.id}>
-                    <Image width="618" height="352" src={t.img} alt="" />
-                    <h4 className="text-[26px] mt-6 mb-[18px] font-medium text-black/80">
-                      {t.title}
-                    </h4>
+                    <Link
+                      href={{
+                        pathname: "/detailblog",
+                        query: { id: `${t.id}` },
+                      }}
+                    >
+                      <Image width="618" height="352" src={t.img} alt="" />
+                    </Link>
+                    <Link
+                      href={{
+                        pathname: "/detailblog",
+                        query: { id: `${t.id}` },
+                      }}
+                    >
+                      <h4 className="text-[26px] mt-6 mb-[18px] font-medium text-black/80">
+                        {t.title}
+                      </h4>
+                    </Link>
                     <p className="text-xl text-justify text-secondary">
                       {t.desc}
                     </p>
@@ -44,18 +59,27 @@ export default function SectionBerita() {
                 return (
                   <div key={t.id} className="flex items-center space-x-6">
                     <div>
-                      <h4 className="text-2xl text-black/80 font-medium mb-[25px]">
-                        {t.title}
-                      </h4>
+                      <Link
+                        href={{
+                          pathname: "/detailblog",
+                          query: { id: `${t.id}` },
+                        }}
+                      >
+                        <h4 className="text-2xl text-black/80 font-medium mb-[25px]">
+                          {t.title}
+                        </h4>
+                      </Link>
                       <p className="text-xl text-secondary">{t.date}</p>
                     </div>
-                    <Image
-                      width="123"
-                      height="120"
-                      src={t.img}
-                      alt=""
+                    <Link
                       className="flex-shrink-0"
-                    />
+                      href={{
+                        pathname: "/detailblog",
+                        query: { id: `${t.id}` },
+                      }}
+                    >
+                      <Image width="123" height="120" src={t.img} alt="" />
+                    </Link>
                   </div>
                 );
               }
@@ -63,7 +87,9 @@ export default function SectionBerita() {
           </div>
         </div>
         <div className="mt-20 text-center">
-          <Button>Lihat Selengkapnya</Button>
+          <Link href="/allblog">
+            <Button>Lihat Selengkapnya</Button>
+          </Link>
         </div>
       </Container>
     </section>

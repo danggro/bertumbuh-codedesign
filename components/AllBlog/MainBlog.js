@@ -14,6 +14,7 @@ export default function MainBlog() {
                 title={b.title}
                 desc={b.desc}
                 img={b.img}
+                id={b.id}
               />
             </li>
           );

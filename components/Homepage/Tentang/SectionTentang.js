@@ -4,6 +4,7 @@ import HeadSection from "@/components/HeadSection";
 import PlayTentang from "@/components/Logo/PlayTentang";
 import tentang from "@/public/tentang.png";
 import Image from "next/image";
+import Link from "next/link";
 
 export default function SectionTentang() {
   return (
@@ -31,7 +32,9 @@ export default function SectionTentang() {
               untuk Melindungi, menjaga, merawat, dan melestarikan pohon-pohon
               yang ada di bumi yang kita pijak sekarang
             </p>
-            <Button>Lihat Selengkapnya</Button>
+            <Link href="/aboutus">
+              <Button>Lihat Selengkapnya</Button>
+            </Link>
           </div>
         </div>
       </Container>

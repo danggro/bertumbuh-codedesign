@@ -3,7 +3,7 @@ import Link from "next/link";
 export default function CardBlog(props) {
   return (
     <>
-      <Link href={"/"}>
+      <Link href={{ pathname: "/detailblog", query: { id: `${props.id}` } }}>
         <div
           className={`w-[510px] h-[278px] bg-cover bg-bottom`}
           style={{ backgroundImage: `url(${props.img})` }}
@@ -12,7 +12,7 @@ export default function CardBlog(props) {
       <div className="text-white bg-primary w-fit px-[21px] py-[6px] text-sm my-6">
         {props.descImg}
       </div>
-      <Link href={"/"}>
+      <Link href={{ pathname: "/detailblog", query: { id: `${props.id}` } }}>
         <h3 className="text-secondary mb-[30px] font-semibold text-2xl">
           {props.title}
         </h3>

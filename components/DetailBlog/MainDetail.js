@@ -1,14 +1,17 @@
 import mockBlogs from "@/utils/Tulisan.json";
 import CardDetail from "./CardDetail";
 import { useState } from "react";
+import { useRouter } from "next/router";
 
 export default function MainDetail() {
   const [blogs, setBlogs] = useState(mockBlogs);
+  const router = useRouter();
+  const { id } = router.query;
   return (
     <div className="mt-[120px]">
       <ul>
         {blogs.map((b) => {
-          if (b.id == 1) {
+          if (b.id == id) {
             return (
               <li key={b.id}>
                 <CardDetail
