@@ -8,6 +8,7 @@ import NavBar from "@/components/Navigation/NavBar";
 import SectionTentang from "@/components/Homepage/Tentang/SectionTentang";
 import Head from "next/head";
 import SectionButuh2Mobile from "@/components/Homepage/Butuh2Mobile/SectionButuh2Mobile";
+import NavBarMobile from "@/components/Navigation/NavBarMobile";
 
 export default function Home() {
   return (
@@ -15,7 +16,12 @@ export default function Home() {
       <Head>
         <title>Bertumbuh | Bring Green Back</title>
       </Head>
-      <NavBar />
+      <div className="hidden md:block">
+        <NavBar />
+      </div>
+      <div className="md:hidden">
+        <NavBarMobile />
+      </div>
       <SectionHero />
       <SectionTentang />
       <SectionButuh />

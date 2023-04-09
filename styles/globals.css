@@ -5,3 +5,27 @@
 html {
   scroll-behavior: smooth;
 }
+
+.hamburger-line {
+  margin-top: 4px;
+  margin-bottom: 4px;
+  display: block;
+  height: 4px;
+  width: 30px;
+  background-color: #656565;
+}
+
+.hamburger-active > span:nth-child(1) {
+  rotate: 45deg;
+  translate: 0px -1.5px;
+}
+
+.hamburger-active > span:nth-child(2) {
+  scale: 0;
+}
+
+.hamburger-active > span:nth-child(3) {
+  transform-origin: bottom left;
+  rotate: -45deg;
+  translate: 0px 1.5px;
+}

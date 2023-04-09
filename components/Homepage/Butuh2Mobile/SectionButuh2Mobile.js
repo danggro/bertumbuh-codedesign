@@ -6,19 +6,19 @@ import ArrowLeft from "./Icon/Arrowleft";
 import ArrowRight from "./Icon/ArrowRight";
 export default function SectionButuh2Mobile() {
   return (
-    <section className="mt-[150px]">
+    <section className="md:mt-[150px] mt-[100px]">
       <Container>
-        <div className="flex">
-          <div className="w-6/12 pt-9">
+        <div className="flex flex-col md:flex-row">
+          <div className="text-center md:text-left md:w-6/12 md:pt-9">
             <HeadSection
               sect="Menjadi Bagian Bertumbuh"
               title="Buat Hal Sederhana Jadi Bermakna"
             />
-            <p className="pr-16 mt-3 text-lg text-secondary">
+            <p className="mt-3 text-lg md:pr-16 text-secondary">
               Ciptakan setiap kegiatan jadi lebih bermakna dan bermanfaat
             </p>
           </div>
-          <div className="relative w-6/12 pt-10 pb-6">
+          <div className="relative pt-10 pb-6 mt-12 md:mt-0 md:w-6/12">
             <div className="w-[248px] h-[403px] top-0 absolute left-[50%] -translate-x-[50%] -z-10 bg-primary/10"></div>
             <CardButuh2Mobile
               icon={<Donator />}

@@ -9,27 +9,23 @@ export default function SectionHero() {
     <Container>
       <section
         id="Hero"
-        className="w-full relative bg-primary/10 xl:pb-[198px] md:pb-10 xl:mt-[70px] md:mt-[45px] xl:px-[45px] md:px-5 xl:pt-[45px] md:pt-5"
+        className="w-full relative bg-primary/10 xl:pb-[198px] md:pb-10 xl:mt-[70px] md:mt-[45px] xl:px-[45px] md:px-5 xl:pt-[45px] md:pt-5 p-5 pb-0"
       >
-        <div className="absolute bottom-0 right-0 z-0">
-          <Image
-            src={hero}
-            alt=""
-            className="origin-bottom-right xl:scale-100 md:scale-[51%]"
-          />
-        </div>
         <div>
-          <h1 className="font-medium xl:text-[60px] xl:leading-[90px] md:leading-[44px] text-[32px] w-9/12 text-black">
+          <h1 className="font-medium xl:text-[60px] xl:leading-[90px] md:leading-[44px] text-[32px] w-9/12 text-black sm:block hidden">
             Bersama Lindungi Bumi Kita Untuk Masa Depan
           </h1>
-          <h4 className="xl:mt-[35px] mt-[15px] xl:w-5/12 md:w-6/12 xl:pr-0 md:pr-4 xl:text-xl text-lg text-secondary text-justify">
+          <h1 className="font-medium leading-[44px] text-[32px] text-black sm:hidden">
+            Bersama Lindungi Bumi Kita
+          </h1>
+          <h4 className="xl:mt-[35px] sm:mt-[15px] xl:w-5/12 md:w-6/12 xl:pr-0 md:pr-4 xl:text-xl text-lg text-secondary text-justify pr-5 mt-[10px] mb-[35px]">
             Kami bermimpi untuk menanam lebih dari 10 juta pohon dan menciptakan
             dunia yang lebih indah dan asri untuk kita, dia, dan semua.
           </h4>
         </div>
-        <div className="xl:mt-[72px] md:mt-10 xl:space-x-[43px] space-x-[27px] flex">
+        <div className="xl:mt-[72px] md:mt-10 sm:space-y-0 space-y-4 xl:space-x-[43px] sm:space-x-[27px] sm:flex">
           <Button>Eksplorasi Bertumbuh</Button>
-          <button className="flex items-center xl:px-5 md:px-4 xl:py-2 md:py-1 space-x-2 border-2 hover:bg-primary group w-fit border-primary hover:drop-shadow-[0_15px_30px_rgba(120,202,147,0.3)]">
+          <button className="flex items-center xl:px-5 px-4 xl:py-2 py-2 md:py-1 space-x-2 border-2 hover:bg-primary group w-fit border-primary hover:drop-shadow-[0_15px_30px_rgba(120,202,147,0.3)]">
             <span className="text-primary group-hover:text-white">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -49,7 +45,14 @@ export default function SectionHero() {
             </span>
           </button>
         </div>
-        <div className="absolute bottom-0 left-0 xl:block md:hidden">
+        <div className="bottom-0 right-0 sm:absolute -z-10">
+          <Image
+            src={hero}
+            alt=""
+            className="origin-bottom-right xl:scale-100 md:scale-[51%]"
+          />
+        </div>
+        <div className="absolute bottom-0 left-0 hidden xl:block">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="718"
@@ -65,7 +68,7 @@ export default function SectionHero() {
       <div className="xl:hidden md:block">
         <ItemHero />
       </div>
-      <div className="xl:mt-[150px] md:mt-[85px] xl:scale-100 mx-auto md:scale-[60%]">
+      <div className="xl:mt-[150px] md:mt-[85px] w-full">
         <JmlPohon />
       </div>
     </Container>
