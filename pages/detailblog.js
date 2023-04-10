@@ -15,7 +15,7 @@ export default function detailblog() {
       <Layout>
         <HeadPage>detail-artikel</HeadPage>
         <Container>
-          <div className="w-[800px] mx-auto">
+          <div className="mx-auto md:w-8/12">
             <MainDetail />
             <AlsoRead />
             <Author />

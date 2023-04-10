@@ -4,11 +4,11 @@ import CardBlog from "./CardBlog";
 export default function MainBlog() {
   const [blogs, setBlogs] = useState(mockBlogs);
   return (
-    <div className="w-10/12 mx-auto">
-      <ul className="flex flex-wrap -mx-[29px]">
+    <div className="mx-auto xl:w-10/12">
+      <ul className="flex md:flex-wrap md:flex-row flex-col md:-mx-3 xl:-mx-[29px]">
         {blogs.map((b) => {
           return (
-            <li key={b.id} className="w-6/12 px-[29px] mb-10">
+            <li key={b.id} className="md:w-6/12 xl:px-[29px] md:px-3 mb-10">
               <CardBlog
                 descImg={`Hutan Indo`}
                 title={b.title}

@@ -9,7 +9,7 @@ export default function SectionHero() {
     <Container>
       <section
         id="Hero"
-        className="w-full relative bg-primary/10 xl:pb-[198px] md:pb-10 xl:mt-[70px] md:mt-[45px] xl:px-[45px] md:px-5 xl:pt-[45px] md:pt-5 p-5 pb-0"
+        className="w-full relative bg-primary/10 xl:pb-[198px] md:pb-10 xl:mt-[70px] md:mt-[45px] xl:px-[45px] md:px-5 xl:pt-[45px] md:pt-5 p-5 pb-0 mt-10"
       >
         <div>
           <h1 className="font-medium xl:text-[60px] xl:leading-[90px] md:leading-[44px] text-[32px] w-9/12 text-black sm:block hidden">

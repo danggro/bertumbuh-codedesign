@@ -7,7 +7,7 @@ export default function NavBarMobile() {
   const [offcanvas, setOffcanvas] = useState(false);
 
   return (
-    <nav className="relative shadow-[0_8px_30px_0_rgba(0,0,0,0.05)] mb-10 py-[15px]">
+    <nav className="relative shadow-[0_8px_30px_0_rgba(0,0,0,0.05)] py-[15px]">
       <Container>
         <div className="flex items-center justify-between">
           <div>

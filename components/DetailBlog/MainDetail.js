@@ -8,7 +8,7 @@ export default function MainDetail() {
   const router = useRouter();
   const { id } = router.query;
   return (
-    <div className="mt-[120px]">
+    <div className="md:mt-[120px] mt-[70px]">
       <ul>
         {blogs.map((b) => {
           if (b.id == id) {
@@ -25,41 +25,41 @@ export default function MainDetail() {
           }
         })}
       </ul>
-      <p className="text-xl text-justify text-secondary">
+      <p className="text-lg text-justify xl:text-xl text-secondary">
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ultrices dui
         diam arcu pharetra at laoreet pellentesque. Imperdiet sit ut ornare
         nulla risus id fames nascetur urna. Eros in neque tincidunt.
       </p>
       <br />
 
-      <h2 className="text-2xl font-semibold text-secondary">
+      <h2 className="text-xl font-semibold xl:text-2xl text-secondary">
         Lorem ipsum dolor sit amet, consectetur
       </h2>
       <br />
-      <p className="text-xl text-justify text-secondary">
+      <p className="text-lg text-justify xl:text-xl text-secondary">
         commodo nunc. Feugiat lorem cras ut cras enim neque, elit, facilisi
         habitasse. Facilisis faucibus nunc congue urna diam. Vitae, diam justo,
         massa, elit. In et nibh ut in diam tellus at tellus diam.
       </p>
       <br />
-      <p className="text-xl text-justify text-secondary">
+      <p className="text-lg text-justify xl:text-xl text-secondary">
         Amet aliquet at a aliquam ac suspendisse euismod. Lectus sit in ut erat
         in. Et nulla a magna amet, amet. Sodales malesuada laoreet bibendum
         neque amet turpis non. Ac arcu lacus turpis elementum imperdiet. Euismod
         purus, libero scelerisque vitae, libero fermentum urna, nunc.
       </p>
       <br />
-      <h2 className="text-2xl font-semibold text-secondary">
+      <h2 className="text-xl font-semibold xl:text-2xl text-secondary">
         Lorem ipsum dolor sit amet, consectetur
       </h2>
       <br />
-      <p className="text-xl text-justify text-secondary">
+      <p className="text-lg text-justify xl:text-xl text-secondary">
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ultrices dui
         diam arcu pharetra at laoreet pellentesque. Imperdiet sit ut ornare
         nulla risus id fames nascetur urna. Eros in neque tincidunt.
       </p>
       <br />
-      <p className="text-xl text-justify text-secondary">
+      <p className="text-lg text-justify xl:text-xl text-secondary">
         Vel leo proin facilisis metus sit ut cursus sagittis. Diam donec mus
         malesuada et ac vulputate. Aenean lacinia suspendisse et mattis
         adipiscing id dictum commodo nunc. Feugiat lorem cras ut cras enim
@@ -68,7 +68,7 @@ export default function MainDetail() {
         tellus diam.
       </p>
       <br />
-      <p className="text-xl text-justify text-secondary">
+      <p className="text-lg text-justify xl:text-xl text-secondary">
         Amet aliquet at a aliquam ac suspendisse euismod. Lectus sit in ut erat
         in. Et nulla a magna amet, amet. Sodales malesuada laoreet bibendum
         neque amet turpis non. Ac arcu lacus turpis elementum imperdiet. Euismod
