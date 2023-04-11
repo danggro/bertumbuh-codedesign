@@ -28,9 +28,12 @@ export default function Donasi() {
           </li>
           <InputDaftar type="text">Nama Lengkap</InputDaftar>
           <InputDaftar type="email">Alamat Email</InputDaftar>
+          <button className="mt-10 hidden xl:block drop-shadow-[0_15px_30px_rgba(120,202,147,0.3)] w-full xl:px-[259px] xl:py-[13px] py-2 bg-primary text-white border border-primary hover:bg-white hover:text-primary xl:text-2xl text-base font-medium">
+            SUBMIT
+          </button>
         </ul>
       </div>
-      <button className="mt-10 xl:order-2 order-3 drop-shadow-[0_15px_30px_rgba(120,202,147,0.3)] w-full xl:px-[259px] xl:py-[13px] py-2 bg-primary text-white border border-primary hover:bg-white hover:text-primary xl:text-2xl text-base font-medium">
+      <button className="mt-10 xl:hidden xl:order-2 order-3 drop-shadow-[0_15px_30px_rgba(120,202,147,0.3)] w-full xl:px-[259px] xl:py-[13px] py-2 bg-primary text-white border border-primary hover:bg-white hover:text-primary xl:text-2xl text-base font-medium">
         SUBMIT
       </button>
       <div className="xl:w-[272px] xl:order-3 order-2">

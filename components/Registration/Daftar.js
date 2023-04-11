@@ -3,7 +3,7 @@ import InputDaftar from "./InputDaftar";
 export default function Daftar() {
   return (
     <div className="flex xl:flex-row flex-col xl:space-x-[76px] ">
-      <ul className="xl:w-[608px] md:w-full order-1 overflow-hidden">
+      <ul className="xl:w-[608px] md:w-full xl:order-none order-1 overflow-hidden">
         <InputDaftar type="text">Nama Lengkap</InputDaftar>
         <InputDaftar type="text">TTL</InputDaftar>
         <InputDaftar type="email">Email</InputDaftar>
@@ -19,11 +19,14 @@ export default function Daftar() {
         </div>
         <InputDaftar type="text">Daftar Jadi Relawan</InputDaftar>
         <InputDaftar type="text">Jadi Relawan Cirebon</InputDaftar>
+        <button className="mt-10 xl:block hidden drop-shadow-[0_15px_30px_rgba(120,202,147,0.3)] w-full xl:px-[259px] xl:py-[13px] py-2 bg-primary text-white border border-primary hover:bg-white hover:text-primary xl:text-2xl text-base font-medium">
+          SUBMIT
+        </button>
       </ul>
-      <button className="mt-10 xl:order-2 order-3 drop-shadow-[0_15px_30px_rgba(120,202,147,0.3)] w-full xl:px-[259px] xl:py-[13px] py-2 bg-primary text-white border border-primary hover:bg-white hover:text-primary xl:text-2xl text-base font-medium">
+      <button className="mt-10 xl:hidden order-3 drop-shadow-[0_15px_30px_rgba(120,202,147,0.3)] w-full xl:px-[259px] xl:py-[13px] py-2 bg-primary text-white border border-primary hover:bg-white hover:text-primary xl:text-2xl text-base font-medium">
         SUBMIT
       </button>
-      <div className="order-2 xl:order-3">
+      <div className="order-2 xl:order-none">
         <div className="flex flex-col justify-center items-center xl:w-[250px] w-full xl:h-[250px] h-[140px] border-2 border-dashed border-secondary">
           <svg
             xmlns="http://www.w3.org/2000/svg"

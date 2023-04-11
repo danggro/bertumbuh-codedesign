@@ -1,6 +1,10 @@
 export default function CardButuh2(props) {
   return (
-    <div className="w-[395px] h-fit px-[43px] pt-10 pb-[35px] bg-[#fafafa]">
+    <div
+      className={`w-[395px] h-fit px-[43px] transition-transform duration-500 ease-out pt-10 pb-[35px] bg-[#fafafa] ${
+        props.curr === props.id && "scale-[115%]"
+      }`}
+    >
       <div className="shadow-2xl shadow-primary/70 w-fit">{props.icon}</div>
       <p className="text-base text-justify text-secondary mt-5 mb-[25px]">
         {props.desc}

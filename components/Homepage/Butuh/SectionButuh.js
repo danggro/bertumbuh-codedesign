@@ -1,6 +1,7 @@
 import Button from "@/components/Button";
 import Container from "@/components/Container";
 import HeadSection from "@/components/HeadSection";
+import Link from "next/link";
 
 export default function SectionButuh() {
   return (
@@ -38,7 +39,9 @@ export default function SectionButuh() {
               bumi tidak stabil dan kami mengajak kamu untuk bergabung dan
               meraih tujuan bersama
             </p>
-            <Button>Gabung Bertumbuh</Button>
+            <Link href="/reg">
+              <Button>Gabung Bertumbuh</Button>
+            </Link>
           </div>
           <div className="md:w-6/12 bg-[url('/butuh.png')] xl:h-auto h-[353px] bg-cover xl:bg-contain xl:bg-no-repeat xl:bg-right"></div>
         </div>

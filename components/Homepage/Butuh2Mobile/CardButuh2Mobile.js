@@ -1,6 +1,6 @@
 export default function CardButuh2Mobile(props) {
   return (
-    <div className="w-full h-fit px-[30px] pt-[30px] pb-10 bg-[#fafafa]">
+    <div className="min-w-full h-fit px-[30px] pt-[30px] pb-10 bg-[#fafafa]">
       <div className="shadow-2xl shadow-primary/70 w-fit">{props.icon}</div>
       <p className="text-sm text-justify text-secondary pr-5 mt-5 mb-[30px]">
         {props.desc}

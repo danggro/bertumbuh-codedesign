@@ -5,6 +5,7 @@ export default function Hamburger(props) {
         props.offcanvas && "hamburger-active"
       }`}
       onClick={props.onClick}
+      name="hamburger"
     >
       <span className="transition-all duration-300 ease-in-out origin-top-left hamburger-line"></span>
       <span className="transition-all duration-300 ease-in-out hamburger-line"></span>

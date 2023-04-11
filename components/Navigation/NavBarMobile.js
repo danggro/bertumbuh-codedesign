@@ -1,31 +1,69 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Hamburger from "./Hamburger";
 import CtgItem from "./CtgItem";
 import Container from "../Container";
 
 export default function NavBarMobile() {
   const [offcanvas, setOffcanvas] = useState(false);
+  useEffect(() => {
+    const hamburger = document.querySelector("#hamburger");
+    window.addEventListener("click", (e) => {
+      if (e.target.id != hamburger.id) {
+        setOffcanvas(false);
+      }
+    });
+    window.onscroll = function () {
+      const header = document.querySelector("#navigation");
+      const fixedNav = header.offsetTop;
+
+      if (window.pageYOffset > fixedNav) {
+        header.classList.add("navbar-fixed");
+      } else {
+        header.classList.remove("navbar-fixed");
+      }
+    };
+  }, []);
 
   return (
-    <nav className="relative shadow-[0_8px_30px_0_rgba(0,0,0,0.05)] py-[15px]">
+    <nav
+      id="navigation"
+      className="fixed bg-white z-50 top-0 w-full shadow-[0_8px_30px_0_rgba(0,0,0,0.05)] py-[15px]"
+    >
       <Container>
         <div className="flex items-center justify-between">
           <div>
-            <Hamburger
-              onClick={() => setOffcanvas(!offcanvas)}
-              offcanvas={offcanvas}
-            />
+            <div className="relative">
+              <button
+                className="absolute w-full h-full bg-transparent"
+                id="hamburger"
+                onClick={() => setOffcanvas(!offcanvas)}
+              ></button>
+              <Hamburger offcanvas={offcanvas} />
+            </div>
+
             <ul
               className={`z-10  flex px-5 py-4 mt-2 shadow-xl bg-white rounded-md flex-col absolute top-full space-y-2 -left-full transition-all xl:py-6 md:py-4 xl:space-x-10 ${
                 offcanvas && "left-[35px]"
               }`}
             >
-              <CtgItem href="#">Home</CtgItem>
-              <CtgItem href="#Mitra">Kemitraan</CtgItem>
-              <CtgItem href="#Tentang">Tentang</CtgItem>
-              <CtgItem href="#Butuh">kami Butuh Kamu</CtgItem>
-              <CtgItem href="#Post">Post</CtgItem>
-              <CtgItem href="#Berita">Newsletter</CtgItem>
+              <CtgItem link href="/#">
+                Home
+              </CtgItem>
+              <CtgItem link href="/#Mitra">
+                Kemitraan
+              </CtgItem>
+              <CtgItem link href="/#Tentang">
+                Tentang
+              </CtgItem>
+              <CtgItem link href="/#Butuh">
+                kami Butuh Kamu
+              </CtgItem>
+              <CtgItem link href="/#Post">
+                Post
+              </CtgItem>
+              <CtgItem link href="/#Berita">
+                Newsletter
+              </CtgItem>
             </ul>
           </div>
           <div>
